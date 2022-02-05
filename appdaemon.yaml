@@ -14,4 +14,6 @@ admin:
 api:
 hadashboard:
 logs:
-  test_log: /conf/logs/test_log.log
+  test_log:
+    name: TestLog
+    filename: /conf/logs/test.log
