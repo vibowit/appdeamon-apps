@@ -2,3 +2,8 @@ hello_world:
   module: hello
   class: HelloWorld
   log: test_log
+
+hall_motion:
+  module: hall_motion
+  class: HallMotion
+  log: test_log
