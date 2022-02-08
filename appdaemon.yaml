@@ -1,3 +1,4 @@
+secrets: /conf/secrets.yaml
 logs:
   test_log:
     name: TestLog
@@ -17,3 +18,15 @@ appdaemon:
       type: hass
       ha_url: !secret ha_url
       token: !secret ha_token
+      namespace: default
+    MQTT:
+      type: mqtt
+      namespace: mqtt
+      verbose: True
+      client_host: !secret mqtt_host
+      client_port: !secret mqtt_port
+      client_user: !secret mqtt_user
+      client_password: !secret mqtt_password
+      event_name: MQTT_EVENT
+      client_topics:
+        - shellies/halldimmer/#
