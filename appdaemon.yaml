@@ -1,19 +1,19 @@
-appdaemon:
-  latitude: 0
-  longitude: 0
-  elevation: 30
-  time_zone: Europe/Berlin
-  plugins:
-    HASS:
-      type: hass
-      ha_url: http://192.168.0.5:8123
-      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI5MGNhYmRkOTc0NjY0MTM2OWYzMWJhM2FiYjIxNjZkMSIsImlhdCI6MTY0NDAxNTgwMiwiZXhwIjoxOTU5Mzc1ODAyfQ.v5_vAO37b108BGP6xRGJhISzVgp9Kk77_2lBL_SiiI4
+logs:
+  test_log:
+    name: TestLog
+    filename: /conf/logs/test.log
 http:
   url: http://192.168.0.7:5050
 admin:
 api:
 hadashboard:
-logs:
-  test_log:
-    name: TestLog
-    filename: /conf/logs/test.log
+appdaemon:
+  latitude: 0
+  longitude: 0
+  elevation: 30
+  time_zone: Europe/Warsaw
+  plugins:
+    HASS:
+      type: hass
+      ha_url: !secret ha_url
+      token: !secret ha_token
